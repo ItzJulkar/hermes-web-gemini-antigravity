@@ -1,0 +1,25 @@
+name: web-gemini-antigravity
+version: 1.1.0
+description: "Gemini 3.8 grounded web search + extract that works with any chat model. Every web_search is answered by Google Search grounding — through the Antigravity CLI (Google Pro subscription, no API key) or the Gemini API (GEMINI_API_KEY). Ships /webgemini and `hermes webgemini` for status, transport switching, on/off and a live self-test."
+author: Julkar
+license: MIT
+homepage: https://github.com/ItzJulkar/hermes-web-gemini-antigravity
+kind: backend
+manifest_version: 2
+requires_hermes: ">=0.23.0"
+tags: [web-search, gemini, google, grounding, antigravity, provider, model-agnostic]
+platforms: [windows, linux, macos]
+provides_web_providers:
+  - gemini-antigravity
+requires_env: []
+optional_env:
+  - GEMINI_API_KEY
+  - GOOGLE_API_KEY
+config_keys:
+  - web.gemini_antigravity.transport
+  - web.gemini_antigravity.model
+  - web.gemini_antigravity.api_model
+  - web.gemini_antigravity.timeout
+  - web.gemini_antigravity.cli_path
+  - web.gemini_antigravity.skip_permissions
+  - web.gemini_antigravity.fallback_backend
